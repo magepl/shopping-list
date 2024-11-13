@@ -1,0 +1,161 @@
+:root {
+  --white: #ffffff;
+  --greentext: #1c8059;
+  --greenborder: #d6ece3;
+  --greenhover: #f7fbf9;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: 'Montreal';
+  src: url('./fonts/ppneuemontreal-bold.woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Montreal';
+  src: url('./fonts/ppneuemontreal-book.woff');
+}
+
+@font-face {
+  font-family: 'Montreal';
+  src: url('./fonts/ppneuemontreal-italic.woff');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montreal';
+  src: url('./fonts/ppneuemontreal-medium.woff');
+}
+
+@font-face {
+  font-family: 'Montreal';
+  src: url('./fonts/ppneuemontreal-semibolditalic.woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montreal';
+  src: url('./fonts/ppneuemontreal-thin.woff');
+  font-weight: 100;
+}
+
+body {
+  font-family: 'Montreal', Arial, Helvetica, sans-serif;
+  background-color: var(--white);
+  color: var(--greentext);
+  margin: 0 1rem;
+}
+
+h1 {
+  font-weight: normal;
+  display: flex;
+  justify-content: start;
+}
+
+button {
+  border: #1c8059 0.1rem solid;
+  padding: 0.4rem 1rem;
+  margin: 0.25rem 0;
+  background-color: var(--white);
+  color: var(--greentext);
+}
+
+button:hover {
+  background-color: var(--greentext);
+  color: var(--greenhover);
+  justify-content: end;
+}
+
+li { 
+  display: flex;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.input-container {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field {
+  height: 2rem;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
